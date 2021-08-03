@@ -9,13 +9,13 @@ sudo mkdir -p "$dir"
 
 # STAGE 1/3
 if [[ ! -f "${dir}/00_install.LCK" ]]; then
-  echo "source ${scriptdir}/install.sh" >> "${HOME}/.bashrc"
+  echo -e "\nsource ${scriptdir}/install.sh\n" >> "${HOME}/.bashrc"
   sudo apt update -y
   sudo apt dist-upgrade -y
   echo '
 System will go down for 3 reboots during the upgrade/installation process.
 You will have to login for the 2nd and 3rd reboots to complete.
-Upon your 3rd time logging in, you should be ready to get cracking
+Upon your 3rd time logging in, you should be ready to get cracking.
 
 System going down for reboot [1/3]...
 '
