@@ -9,7 +9,7 @@ sudo mkdir -p "$dir"
 
 # STAGE 1/3
 if [[ ! -f "${dir}/00_install.LCK" ]]; then
-  echo -e "\nsource ${scriptdir}/install.sh\n" >> "${HOME}/.bashrc"
+  echo -e "\n${scriptdir}/install.sh\n" >> "${HOME}/.bashrc"
   sudo apt update -y
   sudo apt dist-upgrade -y
   echo '
