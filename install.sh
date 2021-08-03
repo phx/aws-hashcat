@@ -1,7 +1,7 @@
 #!/bin/bash
 
 cd $(cd -P -- "$(dirname -- "$0")" && pwd -P)
-scriptdir="$(pwd)"
+scriptdir="$PWD"
 dir='/etc/awshashcat'
 
 echo -e '\nChecking hashcat readiness...\n'
