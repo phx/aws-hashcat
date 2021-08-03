@@ -37,7 +37,7 @@ fi
 # STAGE 3/3
 if [[ ! -f "${dir}/02_cuda.LCK" ]]; then
   echo -e '\nInstalling cuda...\n'
-  sudo "${scriptdir}/scripts/03_cuda.sh"
+  sudo "${scriptdir}/scripts/02_cuda.sh"
   echo -e '\nSystem going down for reboot [3/3]...\n'
   sudo touch "${dir}/02_cuda.LCK"
   sleep 5
