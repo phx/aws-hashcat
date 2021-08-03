@@ -11,7 +11,7 @@ sudo mkdir -p "$dir"
 if [[ ! -f "${dir}/00_install.LCK" ]]; then
   echo "source ${scriptdir}/install.sh" >> "${HOME}/.bashrc"
   sudo apt update -y
-  sudo apt-distupgrade -y
+  sudo apt dist-upgrade -y
   echo '
 System will go down for 3 reboots during the upgrade/installation process.
 You will have to login for the 2nd and 3rd reboots to complete.
