@@ -1,5 +1,10 @@
 #!/bin/bash
 
+if [[ $UID -eq 0 ]]; then
+  echo 'Please run this script without sudo as a non-root user.'
+  exit 1
+fi
+
 cd $(cd -P -- "$(dirname -- "$0")" && pwd -P)
 scriptdir="$PWD"
 dir='/etc/awshashcat'
