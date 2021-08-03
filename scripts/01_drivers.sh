@@ -1,4 +1,5 @@
 #!/bin/bash
+
 sudo apt-get update -yq
 sudo apt-get install -yq hashcat build-essential linux-headers-$(uname -r) unzip p7zip-full linux-image-extra-virtual
 
