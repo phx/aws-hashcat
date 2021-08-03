@@ -4,7 +4,7 @@ cd $(cd -P -- "$(dirname -- "$0")" && pwd -P)
 scriptdir="$PWD"
 dir='/etc/awshashcat'
 
-echo -e '\nChecking hashcat readiness...\n'
+echo -e '\nChecking hashcat readiness...'
 sudo mkdir -p "$dir"
 
 # STAGE 1/3
@@ -28,7 +28,7 @@ fi
 if [[ ! -f "${dir}/01_drivers.LCK" ]]; then
   echo -e '\nConfiguring drivers...\n'
   sudo "${scriptdir}/scripts/01_drivers.sh"
-  echo 'System going down for reboot [2/3]...'
+  echo -e '\nSystem going down for reboot [2/3]...\n'
   sudo touch "${dir}/01_drivers.LCK"
   sleep 5
   sudo reboot
@@ -38,7 +38,7 @@ fi
 if [[ ! -f "${dir}/02_cuda.LCK" ]]; then
   echo -e '\nInstalling cuda...\n'
   sudo "${scriptdir}/scripts/03_cuda.sh"
-  echo 'System going down for reboot [3/3]...'
+  echo -e '\nSystem going down for reboot [3/3]...\n'
   sudo touch "${dir}/02_cuda.LCK"
   sleep 5
   sudo reboot
