@@ -44,6 +44,6 @@ if [[ ! -f "${dir}/02_cuda.LCK" ]]; then
   sudo reboot
 fi
 
-echo -e '\nhashcat is ready.\n'
+echo -e '\nhashcat is ready.'
 
 echo -e "\nTo check nvidia status, run 'sudo nvidia-smi'.\n"
