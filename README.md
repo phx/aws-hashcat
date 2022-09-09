@@ -1,6 +1,6 @@
 # aws-hashcat
 
-This is a quickstart process to install all the necessary GPU drivers and options for `hashcat` on Ubuntu 20.04 AWS instances.
+This is a quickstart process to install all the necessary GPU drivers and options for `hashcat` on Ubuntu 20.04 and 22.04 AWS instances.
 
 The following may not be an exhaustive list, but I know that the following instance types are compatible:
 
@@ -12,6 +12,8 @@ The `p3.16xlarge` requires a [service limit increase](https://console.aws.amazon
 the instance every few minutes or so until it is successful.  You want to be careful running this type of instance.  It is *NOT* for long-term use.
 
 These types of instances are meant to be spun up when you need some decent GPU power for cracking hashes, and you should terminate them as soon as you are done in order to avoid large fees, especially the `p3.16xlarge`.
+
+The full set of installed packages takes around 15GB of space to install. After install around 3GB can be freed with `apt clean all`. It's recommended to use a root disk of at least 16GB on your instances.
 
 ## Installation
 
