@@ -13,7 +13,7 @@ the instance every few minutes or so until it is successful.  You want to be car
 
 These types of instances are meant to be spun up when you need some decent GPU power for cracking hashes, and you should terminate them as soon as you are done in order to avoid large fees, especially the `p3.16xlarge`.
 
-The full set of installed packages takes around 15GB of space to install. After install around 3GB can be freed with `apt clean all`. It's recommended to use a root disk of at least 16GB on your instances.
+The full set of installed packages takes around 15GB of space to install. After install around 3GB will be freed with `apt clean all`. It's recommended to use a root disk of at least 16GB on your instances.
 
 ## Installation
 
@@ -27,11 +27,11 @@ cd aws-hashcat
 
 Your instance will reboot 3 times:
 
-- 1: after running `./install.sh`
-- 2: after logging in via `ssh` a second time
-- 3: after logging in via `ssh` a third time
+- 1: After installing all package updates.
+- 2: After installing hashcat, nvidia drivers and applying kernel module configuration.
+- 3: After installing cuda.
 
-When logging in the 4th time, you will be ready to run `hashcat`, which will already be installed with all necessary GPU drivers.
+After the 3rd reboot, you will be ready to run `hashcat`, which will already be installed with all necessary GPU drivers.
 
 ### Please note:
 
